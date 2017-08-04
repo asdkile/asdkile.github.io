@@ -820,7 +820,14 @@
 
 
 @media (orientation:landscape) {
-  .lk-phone__link span {
-    color: red !important;
+  .mobile-nav__list {
+    display: flex;
+    flex-direction: row;
+    padding-left: 20px;
+    width: 400px;
+  }
+
+  .mobile-nav__link {
+    padding: 10px 5px;
   }
 }
