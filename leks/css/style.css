@@ -819,7 +819,7 @@
 }
 
 
-@media (orientation:landscape) and (max-width:600) {
+@media (orientation:landscape) and (max-width:600px) {
   .mobile-nav__list {
     display: flex;
     flex-direction: row;
