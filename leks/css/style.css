@@ -697,7 +697,7 @@
   .mobile-nav__list {
     position: fixed;
     z-index: 100;
-    top: 125px;
+    top: 130px;
     right: 0;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
