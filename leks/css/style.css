@@ -819,7 +819,7 @@
 }
 
 
-@media (orientation:portrait) {
+@media (orientation:landscape) {
   .lk-phone__link span {
     color: red !important;
   }
