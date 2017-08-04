@@ -820,7 +820,7 @@
 
 
 @media (orientation:portrait) {
-  .lk-header__link {
+  .lk-phone__link span {
     color: red !important;
   }
 }
