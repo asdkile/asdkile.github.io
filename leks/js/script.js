@@ -12,30 +12,31 @@ $('.lk-promo__slider').owlCarousel({
 
 $('.lk-products__slider').owlCarousel({
     loop:true,
+    nav:true,
+    dots:false,
+    dotsEach:false,
     navText: ["<div><span></span></div>","<div><span></span></div>"],
     responsiveClass:true,
-    dots:true,
-    dotsEach:true,
     responsive:{
         0:{
-            items:1,
-            nav:false,
+          items:1,
+          margin: 0,
         },
-        600:{
+        820:{
             items:2,
+            margin: 35,
+        },
+        1120:{
+            items:3,
             margin:35,
         },
         1370:{
-            items:2,
+            items:3,
             margin:35,
-            nav:true,
         },
         1425:{
             items:4,
             margin:35,
-            dots:false,
-            dotsEach:false,
-            nav:true,
         }
     }
 });
