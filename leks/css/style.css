@@ -817,3 +817,10 @@
   }
 
 }
+
+
+@media (orientation:portrait) {
+  .lk-header__link {
+    color: red !important;
+  }
+}
