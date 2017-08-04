@@ -39,3 +39,26 @@ $('.lk-products__slider').owlCarousel({
         }
     }
 });
+
+
+var tog = document.querySelector(".mobile-nav__toggle");
+var list = document.querySelector(".mobile-nav__list");
+tog.onclick = function(){
+  this.classList.toggle("mobile-nav__toggle--active");
+  list.classList.toggle("mobile-nav__list--active");
+  }
+
+var links = document.getElementsByClassName(".mobile-nav__link");
+for (var i=0; i < links.length; i++) {
+  links[i].onclick = function(){
+  tog.classList.toggle("mobile-nav__toggle--active");
+  list.classList.toggle("mobile-nav__list--active");
+  }
+}
+
+$("body").click(function(e) {
+  if($(e.target).closest(".mobile-nav").length==0) {
+    list.classList.remove("mobile-nav__list--active");
+    tog.classList.remove("mobile-nav__toggle--active");
+    }
+  });
