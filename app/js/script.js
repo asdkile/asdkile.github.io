@@ -1,114 +1,100 @@
-// var prev = document.querySelector('.slider__prev');
-// var next = document.querySelector('.slider__next');
-// var submit = document.querySelector('.subscribe__form-submit');
-// var lastActive=0;   //слайд
+var prev = document.querySelector('.slider__prev');
+var next = document.querySelector('.slider__next');
+var submit = document.querySelector('.subscribe__form-submit');
+var lastActive=0;   //слайд
 
-// if (document.documentElement.clientWidth <= 612) {
-//   if (submit.innerHTML != "OK") {
-//     submit.innerHTML = "OK";
-//   }
-// }
+if (document.documentElement.clientWidth <= 612) {
+  if (submit.innerHTML != "OK") {
+    submit.innerHTML = "OK";
+  }
+}
 
-// window.onresize = function(e) {
-//   if (document.documentElement.clientWidth <= 612) {
-//     if (submit.innerHTML != "OK") {
-//       submit.innerHTML = "OK";
-//     }
-//   } else {
-//     if (submit.innerHTML != "Subscribe") {
-//       submit.innerHTML = "Subscribe";
-//     }
-//   }
+window.onresize = function(e) {
+  if (document.documentElement.clientWidth <= 612) {
+    if (submit.innerHTML != "OK") {
+      submit.innerHTML = "OK";
+    }
+  } else {
+    if (submit.innerHTML != "Subscribe") {
+      submit.innerHTML = "Subscribe";
+    }
+  }
 
-// };
+};
 
-// const mySiema = new Siema({
-//   selector: '.slider__content',
-//   perPage: 1,
-//   onInit: init,
-//   onChange: check,
-// });
-
-
-
-// prev.addEventListener('click', () => mySiema.prev(1, () => console.log('I am optional prev callback')));
-// next.addEventListener('click', () => mySiema.next(1, () => console.log('I am optional next callback')));
-
-// function init() {
-//   // prev.addEventListener('click', () => mySiema.prev());
-//   // next.addEventListener('click', () => mySiema.next());
+const mySiema = new Siema({
+  selector: '.slider__content',
+  perPage: 1,
+  onInit: init,
+  onChange: check,
+});
 
 
 
 
+function init() {
 
-//   pag = document.querySelector('.slider__pagination');
-//   pag.children[0].classList.add("active");
+  prev.addEventListener('click', function() { return mySiema.prev()} );
+  next.addEventListener('click', function() { return mySiema.next()} );
 
-//   for (var i = 0; i < pag.children.length; i++) {
-//     pag.children[i].addEventListener('click', setSlide(i));
-//    }
+  pag = document.querySelector('.slider__pagination');
+  pag.children[0].classList.add("active");
 
-//    //замыкание для переходов по слайдам
-//    function setSlide(i) {
-//     return function (e) {
-//       mySiema.goTo(i);
-//     };
-//   }
-// }
+  for (var i = 0; i < pag.children.length; i++) {
+    pag.children[i].addEventListener('click', setSlide(i));
+   }
 
-
-// function check() {
-//   //погасить стрелки на крайних слайдах
-//   curSlide = this.currentSlide;
-//   if (curSlide == 2) {
-//     next.classList.add("disable");
-//     } else {
-//       next.classList.remove("disable");
-//     }
-//   if (curSlide == 0) {
-//     prev.classList.add("disable");
-//     } else {
-//       prev.classList.remove("disable");
-//     }
-
-//   //переключать активный пункт пагинации
-//   pag.children[lastActive].classList.remove("active");
-//   pag.children[curSlide].classList.add("active");
-//   lastActive = curSlide;
-// }
+   //замыкание для переходов по слайдам
+   function setSlide(i) {
+    return function (e) {
+      mySiema.goTo(i);
+    };
+  }
+}
 
 
-// checkMark = document.querySelector('.checkmark');
-// loader = document.querySelector('.circle-loader');
+function check() {
+  //погасить стрелки на крайних слайдах
+  curSlide = this.currentSlide;
+  if (curSlide == 2) {
+    next.classList.add("disable");
+    } else {
+      next.classList.remove("disable");
+    }
+  if (curSlide == 0) {
+    prev.classList.add("disable");
+    } else {
+      prev.classList.remove("disable");
+    }
 
-// //лоадер
-// submit.addEventListener('click', function(e){
-//   e.preventDefault();
-//   this.setAttribute("disabled", "disabled");
-//   prevColor = submit.style.color;   //сохраним цвет текста
-//   submit.style.color = "transparent";   //скрыть текст
-//   loader.classList.remove("load-complete"); //включим анимацию
-//   loader.style.display = "block";   //и покажем лоадер
-
-//   setTimeout(function(){
-//       loader.classList.add("load-complete");  //остановим анимацию
-//       checkMark.style.display = "block";      //покажем галочку
-//       setTimeout(function(){
-//         submit.style.color = prevColor;     //восстановим текст
-//         loader.style.display = "none";
-//         checkMark.style.display = "none";
-//         loader.classList.remove("load-complete");  //остановим анимацию
-//         submit.removeAttribute("disabled", "disabled");
-//       }, 1000)
-//     }, 1000)
-// });
-//
+  //переключать активный пункт пагинации
+  pag.children[lastActive].classList.remove("active");
+  pag.children[curSlide].classList.add("active");
+  lastActive = curSlide;
+}
 
 
-const mySiema = new Siema();
-const prev = document.querySelector('.prev');
-const next = document.querySelector('.next');
+checkMark = document.querySelector('.checkmark');
+loader = document.querySelector('.circle-loader');
 
-prev.addEventListener('click', () => mySiema.prev(1, () => console.log('I am optional prev callback')));
-next.addEventListener('click', () => mySiema.next(1, () => console.log('I am optional next callback')));
+//лоадер
+submit.addEventListener('click', function(e){
+  e.preventDefault();
+  this.setAttribute("disabled", "disabled");
+  prevColor = submit.style.color;   //сохраним цвет текста
+  submit.style.color = "transparent";   //скрыть текст
+  loader.classList.remove("load-complete"); //включим анимацию
+  loader.style.display = "block";   //и покажем лоадер
+
+  setTimeout(function(){
+      loader.classList.add("load-complete");  //остановим анимацию
+      checkMark.style.display = "block";      //покажем галочку
+      setTimeout(function(){
+        submit.style.color = prevColor;     //восстановим текст
+        loader.style.display = "none";
+        checkMark.style.display = "none";
+        loader.classList.remove("load-complete");  //остановим анимацию
+        submit.removeAttribute("disabled", "disabled");
+      }, 1000)
+    }, 1000)
+});
