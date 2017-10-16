@@ -3,6 +3,8 @@ var next = document.querySelector('.slider__next');
 var submit = document.querySelector('.subscribe__form-submit');
 var lastActive=0;   //слайд
 
+svg4everybody();
+
 if (document.documentElement.clientWidth <= 612) {
   if (submit.innerHTML != "OK") {
     submit.innerHTML = "OK";
