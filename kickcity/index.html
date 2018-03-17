@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+  <title>Kickcity</title>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700" rel="stylesheet">
+  <link rel="stylesheet" href="libs/libs.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+  <header class="header">
+    <div class="header__container">
+      <div class="header__col  header__col--left">
+        <a class="header__logo" href="">
+          <img src="img/logo.png" srcset="img/logo@2x.png 2x" alt="KickCity">
+        </a>
+        <nav class="header__nav">
+          <ul class="header__links-list">
+            <li class="header__link  header__link--dropdown  header__link--location">
+              <div class="header__link-icon"></div>
+              <a href="#">Houston</a>
+              <ul class="header__dropdown-list">
+                <li class="header__dropdown-list-item">
+                  <a href="#">Moscow</a>
+                </li>
+                <li class="header__dropdown-list-item">
+                  <a href="#">Saint-Petersburg</a>
+                </li>
+                <li class="header__dropdown-list-item">
+                  <a href="#">Helsinki</a>
+                </li>
+                <li class="header__dropdown-list-item">
+                  <a href="#">Toronto</a>
+                </li>
+                <li class="header__dropdown-list-item">
+                  <a href="#">Dubai</a>
+                </li>
+              </ul>
+            </li>
+            <li class="header__link  header__link--dropdown  header__link--dropdown-2-cols  header__link--categories">
+              <a href="#">
+                Categories
+              </a>
+              <ul class="header__dropdown-list  header__dropdown-list--2-cols">
+                <li class="header__dropdown-list-item">
+                  <a href="#">Concerts</a>
+                </li>
+                <li class="header__dropdown-list-item">
+                  <a href="#">Party</a>
+                </li>
+                <li class="header__dropdown-list-item">
+                  <a href="#">Art</a>
+                </li>
+                <li class="header__dropdown-list-item">
+                  <a href="#">Games</a>
+                </li>
+                <li class="header__dropdown-list-item">
+                  <a href="#">Festivals</a>
+                </li>
+                <li class="header__dropdown-list-item">
+                  <a href="#">Education</a>
+                </li>
+                <li class="header__dropdown-list-item">
+                  <a href="#">Theatre</a>
+                </li>
+                <li class="header__dropdown-list-item">
+                  <a href="#">Fashion</a>
+                </li>
+                <li class="header__dropdown-list-item">
+                  <a href="#">Nightlife</a>
+                </li>
+                <li class="header__dropdown-list-item">
+                  <a href="#">Sport</a>
+                </li>
+                <li class="header__dropdown-list-item">
+                  <a href="#">Business</a>
+                </li>
+                <li class="header__dropdown-list-item">
+                  <a href="#">Meetups </a>
+                </li>
+              </ul>
+            </li>
+            <li class="header__link">
+              <a href="#">Explore</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+
+      <div class="header__col  header__col--right">
+        <div class="header__controls">
+          <form class="search" action="#" method="POST">
+            <div class="search__inner">
+              <input class="search__input" name="search" type="search" placeholder="Example: Cats exhibition">
+              <button class="search__btn" type="submit">Search</button>
+            </div>
+          </form>
+          <div class="header__link  header__link--notifications  header__link--notifications-new">
+            <a href="#"></a>
+          </div>
+        </div>
+
+        <div class="user-panel  user-panel--logged">
+          <ul class="header__links-list">
+            <li class="header__link  header__link--create">
+              <a href="#">Create Event</a>
+            </li>
+            <li class="header__link  header__link--dropdown  header__link--profile">
+              <a class="profile" href="">
+                <div class="profile__balance">
+                  <span class="profile__balance-val">0.0027</span>
+                  <span class="profile__balance-cur">KCY</span>
+                </div>
+                <div class="profile__avatar-wrapper">
+                  <img class="profile__avatar" src="img/pics/ava.jpg" srcset="img/pics/ava@2x.jpg" alt="Your Photo">
+                </div>
+              </a>
+              <ul class="header__dropdown-list">
+                <li class="header__dropdown-list-item">
+                  <a href="#">My profile</a>
+                </li>
+                <li class="header__dropdown-list-item">
+                  <a href="#">Organizer panel</a>
+                </li>
+                <li class="header__dropdown-list-item">
+                  <a href="#">Buy KCY Tokens</a>
+                </li>
+                <li class="header__dropdown-list-item">
+                  <a href="#">Settings</a>
+                </li>
+                <li class="header__dropdown-list-item  header__dropdown-list-item--logout">
+                  <a href="#">Log Out</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <div class="hero">
+      <div class="hero__container">
+        <div class="hero__content">
+          <div class="hero__title">
+            Get rewarded for enjoying life!
+          </div>
+          <div class="hero__desc">
+            Earn crypto tokens by having fun with friends
+          </div>
+          <a href="" class="hero__link  button">
+            Get Started
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <section class="cards  cards--events">
+      <div class="cards__container">
+        <div class="cards__row">
+          <h2 class="cards__title">Trending events</h2>
+          <a class="cards__link-more" href="">More</a>
+        </div>
+
+        <div class="cards__list">
+          <a class="card" href="">
+            <img class="card__pic" src="img/events/event-1.jpg" srcset="img/events/event-1.jpg" alt="New Politics @ House of Blues">
+            <div class="card__inner">
+              <div class="card__top">
+                <div class="card__date">Feb, 15</div>
+              </div>
+              <div class="card__bottom">
+                <div class="card__title">
+                  New Politics @ House of Blues
+                </div>
+              </div>
+            </div>
+          </a>
+
+          <a class="card" href="">
+            <img class="card__pic" src="img/events/event-2.jpg" srcset="img/events/event-2.jpg" alt="Grand Budapest Hotel">
+            <div class="card__inner">
+              <div class="card__top">
+                <div class="card__date">Feb, 13</div>
+                <div class="card__icons">
+                  <div class="card__icon  card__icon--coin">
+                    <div class="card__icon-hidden">
+                      Visit this event and earn tokens
+                    </div>
+                  </div>
+                  <div class="card__icon  card__icon--free">
+                    Free
+                  </div>
+                </div>
+              </div>
+              <div class="card__bottom">
+                <div class="card__title">
+                  Grand Budapest Hotel
+                </div>
+              </div>
+            </div>
+          </a>
+
+          <a class="card  card--large" href="">
+            <img class="card__pic" src="img/events/event-3.jpg" srcset="img/events/event-3.jpg" alt="Romeo and Juliet">
+            <div class="card__inner">
+              <div class="card__top">
+                <div class="card__date">Apr, 24</div>
+              </div>
+              <div class="card__bottom">
+                <div class="card__title">
+                  Romeo and Juliet
+                </div>
+              </div>
+            </div>
+          </a>
+
+          <a class="card  card--liked" href="">
+            <img class="card__pic" src="img/events/event-4.jpg" srcset="img/events/event-4.jpg" alt="A$AP ROCKY">
+            <div class="card__inner">
+              <div class="card__top">
+                <div class="card__date">Mar, 21</div>
+              </div>
+              <div class="card__bottom">
+                <div class="card__title">
+                  A$AP ROCKY
+                </div>
+                <div class="card__tags">
+                  <div class="card__tag">Party</div>
+                  <div class="card__tag">Concert</div>
+                </div>
+              </div>
+            </div>
+          </a>
+
+          <a class="card  card--large" href="">
+            <img class="card__pic" src="img/events/event-5.jpg" srcset="img/events/event-5.jpg" alt="Dieter Rams: Less is Better">
+            <div class="card__inner">
+              <div class="card__top">
+                <div class="card__date">Apr, 07</div>
+                <div class="card__icons">
+                  <div class="card__icon  card__icon--coin">
+                    <div class="card__icon-hidden">
+                      Visit this event and earn tokens
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card__bottom">
+                <div class="card__title">
+                  Dieter Rams: Less is Better
+                </div>
+              </div>
+            </div>
+          </a>
+
+          <a class="card" href="">
+            <img class="card__pic" src="img/events/event-6.jpg" srcset="img/events/event-6.jpg" alt="Carel Fabritius">
+            <div class="card__inner">
+              <div class="card__top">
+                <div class="card__date">Mar, 13—25</div>
+              </div>
+              <div class="card__bottom">
+                <div class="card__title">
+                  Carel Fabritius
+                </div>
+              </div>
+            </div>
+          </a>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+</body>
+
+</html>
